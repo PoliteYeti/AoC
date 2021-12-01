@@ -25,8 +25,6 @@ def get_windows(items):
             window.pop(0)
 
 
-windows = (item for item in get_windows(get_input()))
+answer = sum(1 for _ in get_increases(get_windows(get_input())))
 
-increases = [item for item in get_increases(windows)]
-
-print(len(increases))
+print(answer)

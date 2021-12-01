@@ -16,6 +16,6 @@ def get_increases(items):
             yield current_item
         last_item = current_item
 
-increases = [item for item in get_increases(get_input())]
+answer = sum(1 for _ in get_increases(get_input()))
 
-print(len(increases))
+print(answer)
