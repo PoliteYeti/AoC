@@ -9,18 +9,14 @@ def get_input():
 
 x = y = a = 0
 
-for direction in get_input():
-    if direction[0] in ["up", "down"]:
-        aim_adjust = (
-            int(direction[1])
-            if direction[0] == "down"
-            else -int(direction[1])
-            if direction[0] == "up"
-            else 0
-        )
+for instruction in get_input():
+    direction = instruction[0]
+    magnitude = int(instruction[1])
+    if direction in ["up", "down"]:
+        aim_adjust = magnitude if direction == "down" else -magnitude
         a += aim_adjust
     else:
-        x, y = x + int(direction[1]), y + a * int(direction[1])
+        x, y = x + magnitude, y + a * magnitude
 
 answer = x * y
 
