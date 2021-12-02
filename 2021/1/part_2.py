@@ -2,7 +2,8 @@ import os
 
 
 def get_input():
-    with open(os.path.join(os.path.dirname(__file__), "input.txt"), "r") as input_file:
+    filepath = os.path.join(os.path.dirname(__file__), "input.txt")
+    with open(filepath, "r") as input_file:
         for line in input_file:
             yield int(line)
 
