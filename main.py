@@ -3,8 +3,8 @@ import os
 
 from utils import get_input_factory
 
-YEAR = "2021"
-DAY = "03"
+YEAR = "2020"
+DAY = "01"
 
 
 def run_puzzle(year, day):
