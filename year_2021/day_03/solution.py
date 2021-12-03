@@ -1,0 +1,6 @@
+def part_1(get_input):
+    ...
+
+
+def part_2(get_input):
+    ...

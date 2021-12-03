@@ -1,13 +1,3 @@
-import os
-
-
-def get_input():
-    filepath = os.path.join(os.path.dirname(__file__), "input.txt")
-    with open(filepath, "r") as input_file:
-        for line in input_file:
-            yield int(line)
-
-
 def get_increases(items):
     last_item = None
     for current_item in items:
@@ -29,6 +19,17 @@ def get_windows(items):
             window.pop(0)
 
 
-answer = sum(1 for _ in get_increases(get_windows(get_input())))
+def clean_data(input):
+    for item in input:
+        yield int(item[0])
 
-print(answer)
+
+def part_1(get_input):
+    answer = sum(1 for _ in get_increases(clean_data(get_input())))
+    return answer
+
+
+def part_2(get_input):
+    windows = get_windows(clean_data(get_input()))
+    answer = sum(1 for _ in get_increases(windows))
+    return answer
