@@ -52,7 +52,7 @@ class Tree:
 def part_1(get_input):
     tree = Tree()
     for item in get_input():
-        tree.add(item[0])
+        tree.add(item.strip())
 
     digit_counts = tree.get_level_data()
 
@@ -70,7 +70,7 @@ def part_1(get_input):
 def part_2(get_input):
     tree = Tree()
     for item in get_input():
-        tree.add(item[0])
+        tree.add(item.strip())
 
     oxygen_code = tree.search()
     co2_code = tree.search(default=0)

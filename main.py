@@ -5,7 +5,7 @@ import os
 from utils import get_input_factory
 
 YEAR = 2021
-DAY = 3
+DAY = 4
 
 
 def run_puzzle(year, day):

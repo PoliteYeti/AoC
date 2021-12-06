@@ -21,7 +21,7 @@ def get_windows(items):
 
 def clean_data(input):
     for item in input:
-        yield int(item[0])
+        yield int(item)
 
 
 def part_1(get_input):
