@@ -30,7 +30,7 @@ def play_board(input_numbers, board):
                 return index, get_score(t_board)
 
 
-def part_1(get_input):
+def play_all_boards(get_input):
     lines = get_input()
 
     input_numbers = [int(number) for number in next(lines).split(",")]
@@ -38,19 +38,16 @@ def part_1(get_input):
 
     boards = [board for board in make_boards(lines)]
 
-    results = [play_board(input_numbers, board) for board in boards]
+    return [play_board(input_numbers, board) for board in boards]
+
+
+def part_1(get_input):
+    results = play_all_boards(get_input)
     results.sort(key=lambda x: x[0])
     return results[0][1]
 
 
 def part_2(get_input):
-    lines = get_input()
-
-    input_numbers = [int(number) for number in next(lines).split(",")]
-    next(lines)
-
-    boards = [board for board in make_boards(lines)]
-
-    results = [play_board(input_numbers, board) for board in boards]
+    results = play_all_boards(get_input)
     results.sort(key=lambda x: x[0], reverse=True)
     return results[0][1]
