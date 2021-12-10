@@ -18,9 +18,9 @@ def run_puzzle(year, day):
     get_input = get_input_factory(input_file_path)
 
     solution_1 = solution.part_1(get_input)
-    solution_2 = solution.part_2(get_input)
-
     print(f"{year}, Day {day:02}, Part 1 solution is: {solution_1}")
+
+    solution_2 = solution.part_2(get_input)
     print(f"{year}, Day {day:02}, Part 2 solution is: {solution_2}")
 
 
