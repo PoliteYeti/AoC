@@ -1,9 +1,11 @@
-from importlib import import_module
-import requests
 import os
+from importlib import import_module
+
+import requests
+from dotenv import load_dotenv
 
 YEAR = 2022
-DAY = 1
+DAY = 4
 
 
 def puzzle_input(year: int, day: int):
@@ -20,7 +22,7 @@ def puzzle_input(year: int, day: int):
 
 
 if __name__ == "__main__":
-
+    load_dotenv()
     solver = import_module(f"year{YEAR}.day{DAY}").Solver()
 
     print(f"Answer 1: {solver.part_one(puzzle_input(YEAR,DAY))}")
