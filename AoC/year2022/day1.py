@@ -1,8 +1,8 @@
-from base_solver import BaseSolver
+from AoC.base_solver import BaseSolver
 
 
 class Solver(BaseSolver):
-    def part_one(self, puzzle_input) -> int:
+    def part_one(self, puzzle_input) -> str:
         self.totals = []
         total = 0
 
@@ -15,7 +15,7 @@ class Solver(BaseSolver):
 
         self.totals.append(total)
         self.totals.sort(reverse=True)
-        return self.totals[0]
+        return str(self.totals[0])
 
-    def part_two(self, puzzle_input) -> int:
-        return sum(self.totals[0:3])
+    def part_two(self, puzzle_input) -> str:
+        return str(sum(self.totals[0:3]))

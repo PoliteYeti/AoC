@@ -1,4 +1,4 @@
-from base_solver import BaseSolver
+from AoC.base_solver import BaseSolver
 
 
 class Solver(BaseSolver):
@@ -30,12 +30,12 @@ class Solver(BaseSolver):
 
         return "".join(result)
 
-    def part_one(self, puzzle_input) -> int:
+    def part_one(self, puzzle_input) -> str:
         stacks = self.build_stacks(puzzle_input)
 
         for line in puzzle_input:
             loop, src, dest = [
-                item for item in line.decode("UTF-8").split() if item.isnumeric()
+                itm for itm in line.decode("UTF-8").split() if itm.isnumeric()
             ]
             for _ in range(int(loop)):
                 crate = stacks[src].pop()
@@ -43,14 +43,14 @@ class Solver(BaseSolver):
 
         return self.get_result(stacks)
 
-    def part_two(self, puzzle_input) -> int:
+    def part_two(self, puzzle_input) -> str:
         stacks = self.build_stacks(puzzle_input)
 
         cratestack = []
 
         for line in puzzle_input:
             loop, src, dest = [
-                item for item in line.decode("UTF-8").split() if item.isnumeric()
+                itm for itm in line.decode("UTF-8").split() if itm.isnumeric()
             ]
 
             for _ in range(int(loop)):

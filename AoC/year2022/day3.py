@@ -1,8 +1,8 @@
-from base_solver import BaseSolver
+from AoC.base_solver import BaseSolver
 
 
 class Solver(BaseSolver):
-    def part_one(self, puzzle_input) -> int:
+    def part_one(self, puzzle_input) -> str:
         priority = 0
         for line in puzzle_input:
             compartment1 = set(line[0 : len(line) // 2])
@@ -11,9 +11,9 @@ class Solver(BaseSolver):
             result = result - 96 if result > 96 else result - 38
 
             priority += result
-        return priority
+        return str(priority)
 
-    def part_two(self, puzzle_input) -> int:
+    def part_two(self, puzzle_input) -> str:
         group = []
         priority = 0
 
@@ -27,4 +27,4 @@ class Solver(BaseSolver):
                 group = []
 
                 priority += result
-        return priority
+        return str(priority)

@@ -1,4 +1,4 @@
-from base_solver import BaseSolver
+from AoC.base_solver import BaseSolver
 
 
 class Solver(BaseSolver):
@@ -12,7 +12,7 @@ class Solver(BaseSolver):
 
         return set1, set2
 
-    def part_one(self, puzzle_input) -> int:
+    def part_one(self, puzzle_input) -> str:
         overlaps = 0
         for line in puzzle_input:
             set1, set2 = self._prep_input(line)
@@ -20,9 +20,9 @@ class Solver(BaseSolver):
             if set1.issuperset(set2) or set2.issuperset(set1):
                 overlaps += 1
 
-        return overlaps
+        return str(overlaps)
 
-    def part_two(self, puzzle_input) -> int:
+    def part_two(self, puzzle_input) -> str:
         overlaps = 0
         for line in puzzle_input:
             set1, set2 = self._prep_input(line)
@@ -30,4 +30,4 @@ class Solver(BaseSolver):
             if len(set1.intersection(set2)) > 0:
                 overlaps += 1
 
-        return overlaps
+        return str(overlaps)

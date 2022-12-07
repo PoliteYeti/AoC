@@ -1,4 +1,4 @@
-from base_solver import BaseSolver
+from AoC.base_solver import BaseSolver
 
 
 class Solver(BaseSolver):
@@ -15,14 +15,14 @@ class Solver(BaseSolver):
             b"C Z": [3 + 3, 6 + 1],
         }
 
-    def part_one(self, puzzle_input) -> int:
+    def part_one(self, puzzle_input) -> str:
         score = 0
         for line in puzzle_input:
             score += self.scoremap[line][0]
-        return score
+        return str(score)
 
-    def part_two(self, puzzle_input) -> int:
+    def part_two(self, puzzle_input) -> str:
         score = 0
         for line in puzzle_input:
             score += self.scoremap[line][1]
-        return score
+        return str(score)

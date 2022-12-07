@@ -1,4 +1,4 @@
-from base_solver import BaseSolver
+from AoC.base_solver import BaseSolver
 
 
 class Solver(BaseSolver):
@@ -8,13 +8,14 @@ class Solver(BaseSolver):
             charset = set(candidate)
             if len(charset) == packet_len:
                 return i + packet_len
+        return 0
 
-    def part_one(self, puzzle_input) -> int:
+    def part_one(self, puzzle_input) -> str:
         buffer = next(puzzle_input).decode("UTF-8")
 
-        return self.get_packet_marker(buffer, 4)
+        return str(self.get_packet_marker(buffer, 4))
 
-    def part_two(self, puzzle_input) -> int:
+    def part_two(self, puzzle_input) -> str:
         buffer = next(puzzle_input).decode("UTF-8")
 
-        return self.get_packet_marker(buffer, 14)
+        return str(self.get_packet_marker(buffer, 14))
