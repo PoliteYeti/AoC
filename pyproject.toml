@@ -8,12 +8,12 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.9"
 requests = "^2.28.1"
-mypy = "^0.991"
 
 [tool.poetry.group.dev.dependencies]
 black = "^22.10.0"
 flake8 = "^6.0.0"
 isort = "^5.10.1"
+mypy = "^0.991"
 
 [build-system]
 requires = ["poetry-core"]

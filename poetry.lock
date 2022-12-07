@@ -105,7 +105,7 @@ python-versions = ">=3.6"
 name = "mypy"
 version = "0.991"
 description = "Optional static typing for Python"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 
@@ -124,7 +124,7 @@ reports = ["lxml"]
 name = "mypy-extensions"
 version = "0.4.3"
 description = "Experimental type system extensions for programs checked with the mypy typechecker."
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -186,7 +186,7 @@ use_chardet_on_py3 = ["chardet (>=3.0.2,<6)"]
 name = "tomli"
 version = "2.0.1"
 description = "A lil' TOML parser"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 
@@ -194,7 +194,7 @@ python-versions = ">=3.7"
 name = "typing-extensions"
 version = "4.4.0"
 description = "Backported and Experimental Type Hints for Python 3.7+"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 
@@ -214,7 +214,7 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "f83c4a720c96f1d87231d1a56f8b8001505090c315ef375629128c4049208c1b"
+content-hash = "8348543eb6194de267af94dd265d933c6f5ec4521a62236b16d820b51f580409"
 
 [metadata.files]
 black = [
