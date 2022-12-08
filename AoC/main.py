@@ -5,7 +5,7 @@ import requests
 from dotenv import load_dotenv
 
 YEAR = 2022
-DAY = 5
+DAY = 8
 
 
 def puzzle_input(year: int, day: int):
